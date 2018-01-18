@@ -47,8 +47,10 @@
                     @if(Auth::check())
                     <li> <a href="{{ ('/home') }}"> Home</li></a>
                     <li><a href="{{ route('Type.index') }}">Tipe Kamar</li></a>
-                    <li><a href="{{ route('Pengunjung.index') }}">Pengunjung hotel</li></a>
-                    <li><a href="{{ route('Petugas.index') }}">Petugas hotel</li></a>
+                    <li><a href="{{ route('Pengunjung.index') }}">Pengunjung Hotel</li></a>
+                    <li><a href="{{ route('Petugas.index') }}">Petugas Hotel</li></a>
+                 <li><a href="{{ route('Kamar.index') }}">Kamar Hotel</li></a>
+
                     
                     @endif
                             

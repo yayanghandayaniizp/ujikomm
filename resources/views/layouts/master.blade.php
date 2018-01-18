@@ -44,10 +44,11 @@
                     
                     
                   <li class="current"><a href="{{ ('/home') }}"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                    <li><a href="{{ route('Type.index') }}"><i class="glyphicon glyphicon-list"></i> Type kamar</a></li>
-                    <li><a href="{{ route('Pengunjung.index') }}"><i class="glyphicon glyphicon-list"></i> Pengunjung hotel</a></li>
-                    <li><a href="{{ route('Petugas.index') }}"><i class="glyphicon glyphicon-list"></i> Petugas hotel</a></li>
-                    
+                    <li><a href="{{ route('Type.index') }}"><i class="glyphicon glyphicon-list"></i> Type Kamar</a></li>
+                    <li><a href="{{ route('Pengunjung.index') }}"><i class="glyphicon glyphicon-list"></i> Pengunjung Hotel</a></li>
+                    <li><a href="{{ route('Petugas.index') }}"><i class="glyphicon glyphicon-list"></i> Petugas Hotel</a></li>
+                     <li><a href="{{ route('Kamar.index') }}"><i class="glyphicon glyphicon-list"></i> Kamar Hotel</a></li>
+                     <li><a href="{{ route('Transaksi.index') }}"><i class="glyphicon glyphicon-list"></i> Transaksi</a></li>
  @endif                
                 </ul>
 

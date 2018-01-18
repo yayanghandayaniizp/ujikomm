@@ -27,4 +27,8 @@ Route::resource('Iklan', 'IklanController');
 Route::resource('Type', 'TypekamarController');
 Route::resource('Pengunjung', 'PengunjungController');
 Route::resource('Petugas', 'PetugasController');
+Route::resource('Kamar', 'KamarController');
+Route::resource('Transaksi', 'TransaksiController');
+
+
 });
