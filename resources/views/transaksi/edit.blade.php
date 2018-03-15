@@ -1,24 +1,47 @@
-@extends('layouts.master')
+@extends('home2')
 @section('content')
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-				<ul class="breadcrumb">
-				<li><a href="{{ url('/home') }}">Administrator</a></li>
-				<li><a href="{{ url('/admin/User') }}">Transaksi</a></li>
-				<li class="active">data Transaksi</li>
-			</ul>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h2 class="panel-title">Ubah data Transaksi</h2>
+<div class="row">
+	<center><h1>Transaksi</h1></center>
+	<div class="panel panel-primary">
+		<div class="panel-heading">Transaksi
+		<div class="panel-title pull-right"><a href="{{URL::previous()}}">Kembali</a></div></div>
+
+		<div class="panel-body">
+			<form action="{{route('transaksi.update',$transaksi->id)}}" method = "post">
+				<input type="hidden" name="_method" value="PUT">
+				<input type="hidden" name="_token" value="{{csrf_token()}}">
+
+				<div class="form-group">
+					<label class="control-lable">Status</label>
+					<select class="form-control" name="status">
+					@foreach($kamar as $b)
+					<option value="{{$b->id}}">{{$b->status}}</option>
+					@endforeach
+					</select>
 				</div>
-				<div class="panel-body">
-					{!! Form::model($transaksiku, ['url'=>route('Transaksi.update', $transaksiku->id), 'method'=>'put', 'class'=>'form-horizontal']) !!}
-					@include('transaksi._form')
-					{!! Form::close() !!}
+
+				<div class="form-group">
+					<label class="control-lable">Harga</label>
+					<select class="form-control" name="c">
+					@foreach($kamar as $b)
+					<option value="{{$b->harga}}">{{$b->harga}}</option>
+					@endforeach
+					</select>
 				</div>
-			</div>
+
+				<div class="form-group">
+					<label class="control-lable">Jumlah</label>
+					<input type="text" name="d" class="form-control" value="{{$transaksi->jumlah}}" required="">
+				</div>
+	
+				<div class="form-group">
+					<button type="submit" class="btn btn-succes">Simpan</button>
+					<button type="reset" class="btn btn-danger">Reset</button>
+				</div>
+			</form>	
 		</div>
 	</div>
+</div>
 </div>
 @endsection

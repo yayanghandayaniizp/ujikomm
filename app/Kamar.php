@@ -10,7 +10,7 @@ class Kamar extends Model
 
     
 	protected $fillable = [
-        'status','types_id'];
+        'status','types_id','namatipe'];
     //
 
 

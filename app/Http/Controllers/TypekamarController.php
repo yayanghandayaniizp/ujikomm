@@ -24,13 +24,14 @@ class TypekamarController extends Controller
             $typekamarr = Typekamar::all();
             return Datatables::of($typekamarr)
               ->addColumn('action',function($typekamarrr){
+
                 return view('datatable._action', [
                     'model'     => $typekamarrr,
                     'form_url'  => route('Typekamar.destroy',$typekamarrr->id),
                     'edit_url'  => route('Typekamar.edit',$typekamarrr->id),
                     'confirm_message' => 'Yakin Ingin Menghapus ' . $typekamarrr->name . ' ?' ]);
+                
             })->make(true);
-
               }
 
 

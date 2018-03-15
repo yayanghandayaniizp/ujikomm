@@ -67,6 +67,8 @@ class KamarController extends Controller
         //
         $kamaar = new Kamar;
         $kamaar->status = $request['status'];
+        $kamaar->types_id = $request['types_id'];
+        $kamaar->namatipe = $request['namatipe'];
 
 
          $kamaar->save();

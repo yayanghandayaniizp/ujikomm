@@ -16,11 +16,10 @@ class CreateKamarsTable extends Migration
         Schema::create('kamars', function (Blueprint $table) {
         $table->increments('id');
             $table->string('status');
-            $table->integer('types_id')->unsigned();
+            $table->integer('types_id');
             $table->timestamps();
 
              $table->foreign('types_id')->references('id')->on('typekamars')->onUpdate('cascade')->onDelete('cascade');
-        });
     }
 
     /**
